@@ -44,7 +44,7 @@ body {
 #menu a {
 	text-decoration: none;
 }
-#menu li a:active {
+#menu li a:active, a.active {
 	color: #0972a5;
 }
 #content {
