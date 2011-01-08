@@ -4,5 +4,5 @@ $(document).ready(function() {
 		if($(this).attr("href") == location.href.toLowerCase()) {
 			$(this).addClass("active");
 		}
-	|
+	});
 });
