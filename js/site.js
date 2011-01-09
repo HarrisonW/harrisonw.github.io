@@ -12,7 +12,7 @@ $(document).ready(function() {
 		if(getPageName($(this).attr("href")) == getPageName(location.href)) {
 			$(this).addClass("active");
 			div = $('<div class="callout"></div>');
-			div.css('top',$(this).offset().top-15);
+			div.css('top',$(this).offset().top-5);
 			$('#menu').after(div);
 		}
 	});

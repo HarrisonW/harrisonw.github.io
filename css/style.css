@@ -50,13 +50,13 @@ body {
 .callout {
   border-color: transparent #FFC73D transparent transparent;
   border-style: solid;
-  border-width: 30px 30px 30px 0px;
+  border-width: 20px 25px 20px 0px;
   /*
   width: 30px;
   height: 50px; */
 
   position: absolute;
-  left: 190px; /* Width of the menu - right padding */
+  left: 195px;
 }
 #content {
 	float: right;
