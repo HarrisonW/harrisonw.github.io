@@ -1,6 +1,10 @@
 function getPageName(string) {
   parts = string.toLowerCase().split('/');
-  return parts[parts.length - 1];
+  result = parts[parts.length - 1];
+  if(result == "") {
+    result = "index.html";
+  }
+  return result;
 }
 $(document).ready(function() {
 	$("#years").accordion({autoHeight: false});
