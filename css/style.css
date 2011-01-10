@@ -17,10 +17,6 @@ body {
 	height: 100px;
 }
 #header .logo {
-	color: #ffc73d;
-  border-color: red green blue orange;
-  border-style: dashed;
-  border-width:12px;
   width:0;
   height:0;
   display: inline-block;
