@@ -7,7 +7,7 @@ body {
 }
 #container {
 	width: 1000px;
-	background: #fff url('cornellsnow.jpg') no-repeat left top;
+	/* background: #fff url('cornellsnow.jpg') no-repeat left top; */
 	margin: 0px auto;
 	height: 800px;
 	position: relative;
