@@ -1,6 +1,162 @@
----
-layout: default
----
-<p>Hi!</p>
-<p>I'm Harrison.</p>
-<p>For more information about me, feel free to browse the links to the left at your leisure.</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Harrison Wong</title>
+  <link href="css/reset.css" media="screen" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+@-webkit-keyframes bounce {
+    0% { opacity: 0; -webkit-transform: translateY(-800px); }
+    60% { opacity: 1; -webkit-transform: translateY(25px); }
+    80% { -webkit-transform: translateY(-8px); opacity: .8; }
+    100% { -webkit-transform: translateY(0); opacity: 1; }
+}
+
+@-moz-keyframes bounce {
+    0% { opacity: 0; -moz-transform: translateY(-800px); }
+    60% { opacity: 1; -moz-transform: translateY(25px); }
+    80% { -moz-transform: translateY(-8px); opacity: .8; }
+    100% { -moz-transform: translateY(0); }
+}
+
+@-ms-keyframes bounce {
+    0% { opacity: 0; -ms-transform: translateY(-800px); }
+    60% { opacity: 1; -ms-transform: translateY(25px); }
+    80% { -ms-transform: translateY(-8px); opacity: .8; }
+    100% { -ms-transform: translateY(0); }
+}
+
+@-o-keyframes bounce {
+    0% { opacity: 0; -o-transform: translateY(-800px); }
+    60% { opacity: 1; -o-transform: translateY(25px); }
+    80% { -o-transform: translateY(-8px); opacity: .8; }
+    100% { -o-transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0% { opacity: 0; transform: translateY(-800px); }
+    60% { opacity: 1; transform: translateY(25px); }
+    80% { transform: translateY(-8px); opacity: .8; }
+    100% { transform: translateY(0); }
+}
+
+.bounce {
+    -webkit-animation: bounce .75s ease-in-out;
+    -moz-animation-name: bounce .75s ease-in-out;
+    -ms-animation-name: bounce .75s ease-in-out;
+    -o-animation-name: bounce .75s ease-in-out;
+    animation-name: bounce .75s ease-in-out;
+}
+    body {
+      font-size: 14px;
+      font-family: sans-serif;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      background-color: #E3A869;
+    }
+    header {
+      margin-top: 5em;
+    }
+    footer {
+      margin-top: 2em;
+    }
+    #content, header, footer {
+      width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #content h1 {
+      font-size: 7em;
+      text-align: right;
+      cursor: default;
+      display: block;
+      width: 400px;
+      height: 250px;
+      background:url('harrisonwong.png');
+      background-repeat: no-repeat;
+    }
+    #content h1 span {
+      display: none;
+    }
+    footer {
+      background:url('css/footer.png');
+      background-repeat: no-repeat;
+    }
+    footer ul {
+      /* -moz-border-radius:6px;
+      -webkit-border-radius:6px;
+      border-radius:6px;
+      border:1px solid #CCC; */
+      overflow: auto;
+    }
+    footer li {
+      display: block;
+      position: relative;
+      float: left;
+      border-right: 1px solid rgba(0,0,0,0.1);
+      line-height: 30px;
+    }
+    footer li a {
+      display: block;
+      margin: 10px 11px 10px 10px;
+      background-repeat: no-repeat;
+      height: 30px;
+      background-size: 100%;
+      color: #FFF;
+    }
+    footer li:hover {
+      text-shadow: 2px 2px rgba(0,0,0,0.5);
+    }
+    footer li a span {
+      display: none;
+    }
+    footer .github {
+      background:url('css/icons/github.png');
+      width: 70px;
+    }
+    footer .github:hover {
+      background:url('css/icons/github-hover.png');
+    }
+    footer .facebook {
+      background:url('css/icons/fb.png');
+      width: 30px;
+    }
+    footer .facebook:hover {
+      background:url('css/icons/fb-hover.png');
+    }
+    footer .google {
+      background:url('css/icons/g+.png');
+      width: 30px;
+    }
+    footer .google:hover {
+      background:url('css/icons/g+-hover.png');
+    }
+  </style>
+  <!--
+  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.8.17.min.js"></script>
+  <script type="text/javascript">
+  
+  </script> -->
+</head>
+<body>
+  <header>
+
+  </header>
+  <section id="content">
+    <h1>
+      <span>Harrison<br />Wong</span>
+    </h1>
+  </section>
+  <footer class="bounce">
+    <ul>
+      <li><a href="/projects.html">Projects</a></li>
+      <li><a href="/classes.html">Classes</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="https://github.com/HarrisonW" class="github"><span>Github</span></a></li>
+      <li><a href="https://plus.google.com/113671703116927364822" class="google"><span>Google+</span></a></li>      
+      <li><a href="https://facebook.com/hw" class="facebook"><span>Facebook</span></a></li>
+    </ul>
+  </footer>
+</body>
+</html>
