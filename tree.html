@@ -52,32 +52,86 @@
       -webkit-user-select: none;
       -moz-user-select: none;
       user-select: none;
-      background-color: #E3A869;
+      background-color: #D19275;
     }
     header {
-      margin-top: 5em;
+      
+    }
+    header a {
+      display: block;
+      background-image:url('harrisonwong-header.png');
+      background-repeat: no-repeat;
+      width: 400px;
+      height: 75px;
+    }
+    header a span {
+      display: none;
     }
     footer {
       margin-top: 2em;
     }
-    #content, header, footer {
+    #content, header {
+      width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      background-repeat: no-repeat;
+    }
+    footer {
       width: 400px;
       margin-left: auto;
       margin-right: auto;
     }
-    #content h1 {
-      font-size: 7em;
-      text-align: right;
-      cursor: default;
-      display: block;
-      width: 400px;
-      height: 250px;
-      background-image:url('harrisonwong.png');
+    #tree {
+      width: 800px;
+    }
+    #tree .top {
+      background-color: green;
+      height: 150px;
+    }
+    #tree .branch {
+      height: 200px;
+      width: 800px;
+      background-image:url('css/branch.png');
       background-repeat: no-repeat;
     }
-    #content h1 span {
-      display: none;
+    #tree .branch h2 {
+      font-size: 1.5em;
+      font-weight: 700;
     }
+    #tree .branch img {
+      width: 300px;
+      -moz-border-radius:6px;
+      -webkit-border-radius:6px;
+      border-radius:6px;
+      border: 2px solid #CCC;
+    }
+    #tree .branch > div {
+      margin: 10px;
+      padding: 10px;
+      -moz-border-radius:6px;
+      -webkit-border-radius:6px;
+      border-radius:6px;
+      border: 2px solid #CCC;
+      width: 310px;
+    }
+    #tree .branch:nth-child(odd) {
+      background-color: #FFF;
+    }
+    #tree .branch:nth-child(odd) > div {
+      float: left;
+    }
+    #tree .branch:nth-child(even) {
+      background-color: #FFF;
+    }
+    #tree .branch:nth-child(even) > div {
+      float: right;
+    }
+    #tree .base {
+      clear: both;
+      background-color: brown;
+      height: 100px;
+    }
+
     footer {
       background-image:url('css/footer.png');
       background-repeat: no-repeat;
@@ -99,9 +153,9 @@
     footer li a {
       display: block;
       margin: 10px 11px 10px 10px;
-      background-size: 100% 100%;
       background-repeat: no-repeat;
       height: 30px;
+      background-size: 100%;
       color: #FFF;
     }
     footer li:hover {
@@ -141,12 +195,65 @@
 </head>
 <body>
   <header>
-
+    <a href="/">
+      <span>Harrison Wong</span>
+    </a>
   </header>
   <section id="content">
-    <h1>
-      <span>Harrison<br />Wong</span>
-    </h1>
+    <div id="tree">
+      <div class="top"></div>
+      <div class="branch">
+        <div>
+          <h2>Facebook</h2>
+          May - August 2011
+          <a href="https://www.facebook.com/settings/?tab=privacy">
+            <img src="images/facebook.png" />
+          </a>
+          <p>
+            Software engineering intern working on the privacy team that was responsible for the August 2011 privacy revamp. Worked on all areas of the website, including mobile, photos, tagging and frontend. Focused primarily on tag approval and wall post privacy.
+          </p>
+        </div>
+      </div>
+      <div class="branch">
+        <div>
+          <h2>Corre Group</h2>
+          December 2010 - May 2011
+          <a href="http://www.corregroup.com/">
+            <img src="images/corre-group.png" />
+          </a>
+          <p>
+            Lead software engineer at financial services startup that analyzes hedge funds and builds summary statistics. Responsible for designing and building the web platform in Ruby on Rails/MySQL to calculate and display statistics.
+          </p>
+        </div>
+      </div>
+      <div class="branch">
+        <div>
+          <h2>Reality Check Network</h2>
+          July 2008 - May 2011
+          <a href="http://www.realitychecknetwork.com/">
+            <img src="images/rcn.png" />
+          </a>
+          <p>
+            Software developer at web hosting company that hosts a few of the largest sites on the internet. Designed and built the Customer Resource Management system, which integrates all parts of the business together, from server provisioning and network topology to billing and a customer control panel. Learned how to administer servers as well as design a large application with many users.
+          </p>
+        </div>
+      </div>
+      <div class="branch">
+        <div>
+          <h2>eMed</h2>
+          2010 - 2012
+          <a href="http://www.rso.cornell.edu/emed/">
+            <img src="images/emed.png" />
+          </a>
+          <p>
+            Lead web developer for designing website to provice support to Cornell engineering pre-medical students. Set up and designed the main website. Additionally, coded extra modules pertaining to requirements.
+          </p>
+        </div>
+      </div>
+      <div class="branch">
+      </div>
+      <div class="base"></div>
+    </div>
   </section>
   <footer class="bounce">
     <ul>
