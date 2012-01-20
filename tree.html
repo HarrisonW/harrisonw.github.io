@@ -85,13 +85,18 @@
       width: 800px;
     }
     #tree .top {
-      background-color: green;
+      background-image:url('css/tree-top.png');
+      background-repeat: no-repeat;
       height: 150px;
+      text-align: center;
+    }
+    #tree .top img {
+      padding-top: 75px;
     }
     #tree .branch {
       height: 200px;
       width: 800px;
-      background-image:url('css/branch.png');
+      background-image:url('css/tree-branch.png');
       background-repeat: no-repeat;
     }
     #tree .branch h2 {
@@ -113,15 +118,14 @@
       border-radius:6px;
       border: 2px solid #CCC;
       width: 310px;
+      background-color: rgba(255, 255, 255, 0.7);
     }
     #tree .branch:nth-child(odd) {
-      background-color: #FFF;
     }
     #tree .branch:nth-child(odd) > div {
       float: left;
     }
     #tree .branch:nth-child(even) {
-      background-color: #FFF;
     }
     #tree .branch:nth-child(even) > div {
       float: right;
@@ -194,14 +198,9 @@
   </script> -->
 </head>
 <body>
-  <header>
-    <a href="/">
-      <span>Harrison Wong</span>
-    </a>
-  </header>
   <section id="content">
     <div id="tree">
-      <div class="top"></div>
+      <div class="top"><img src="harrisonwong-header.png" /></div>
       <div class="branch">
         <div>
           <h2>Facebook</h2>
