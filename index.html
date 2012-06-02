@@ -1,162 +1,393 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Harrison Wong</title>
-  <link href="css/reset.css" media="screen" rel="stylesheet" type="text/css" />
-  <style type="text/css">
-@-webkit-keyframes bounce {
-    0% { opacity: 0; -webkit-transform: translateY(-800px); }
-    60% { opacity: 1; -webkit-transform: translateY(25px); }
-    80% { -webkit-transform: translateY(-8px); opacity: .8; }
-    100% { -webkit-transform: translateY(0); opacity: 1; }
-}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Harrison Wong</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-@-moz-keyframes bounce {
-    0% { opacity: 0; -moz-transform: translateY(-800px); }
-    60% { opacity: 1; -moz-transform: translateY(25px); }
-    80% { -moz-transform: translateY(-8px); opacity: .8; }
-    100% { -moz-transform: translateY(0); }
-}
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate-custom.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Exo:700' rel='stylesheet' type='text/css'>
+    <link href="css/other.css" rel="stylesheet">
 
-@-ms-keyframes bounce {
-    0% { opacity: 0; -ms-transform: translateY(-800px); }
-    60% { opacity: 1; -ms-transform: translateY(25px); }
-    80% { -ms-transform: translateY(-8px); opacity: .8; }
-    100% { -ms-transform: translateY(0); }
-}
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
 
-@-o-keyframes bounce {
-    0% { opacity: 0; -o-transform: translateY(-800px); }
-    60% { opacity: 1; -o-transform: translateY(25px); }
-    80% { -o-transform: translateY(-8px); opacity: .8; }
-    100% { -o-transform: translateY(0); }
-}
+  <body>
+    <div class="container">
+      <div id="content" class="well">
+        <section id="projects">
+          <div class="section-header">
+            <div class="row">
+              <div class="span8">
+                <h1>Projects / Work</h1>
+                <div class="accordion">
+                  <div class="accordion-group">
+                    <div class="accordion-heading">
+                      <h3 class="accordion-toggle">2012</h3>
+                    </div>
+                    <div class="accordion-body collapse in">
+                      <div class="accordion-inner">
+                        <ul>
+                          <li>
+                            <h4><a href="http://vantageousvideo.com/">Vantageous Video</a></h4>
+                          </li>
+                          <li>
+                            <h4><a href="http://jatm.harrisoncwong.com/">JATM (Just Another Task Manager)</a></h4>
+                            <p>
+                              A realtime collaborative task management app built with node.js, mongodb and socket.io.
+                              Allows users to share task lists with other uses and to edit tasks simultaneously together.
+                            </p>
+                          </li>
+                          <li>
+                            <h4><a href="https://github.com/HarrisonW/node-reduce">Node Reduce</a></h4>
+                            <p>
+                              A distributed MapReduce framework written in node.js.
+                              Uses any javascript capable browser as worker nodes to allow for processing through javascript.
+                              Sends/receives data to workers through socket.io.
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
 
-@keyframes bounce {
-    0% { opacity: 0; transform: translateY(-800px); }
-    60% { opacity: 1; transform: translateY(25px); }
-    80% { transform: translateY(-8px); opacity: .8; }
-    100% { transform: translateY(0); }
-}
+                  <div class="accordion-group">
+                    <div class="accordion-heading">
+                      <h3 class="accordion-toggle">2011</h3>
+                    </div>
+                    <div class="accordion-body collapse in">
+                      <div class="accordion-inner">
+                        <ul>
+                          <li>
+                            <h4><a href="https://www.facebook.com/">Facebook</a></h4>
+                            <p>
+                              Worked on privacy team responsible for privacy revamp released August 2011.
+                              Worked over all areas of the website, but focused primarily on aspects of tag approval and wall post privacy.
+                            </p>
+                          </li>
+                          <li>
+                            <h4><a href="http://www.corregroup.com/">Corre Group</a></h4>
+                            <p>
+                              Financial services firm that specializes in hedge fund analysis.
+                              Responsible for administering database of financial data, solving problems of sheer size and optimization.
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
 
-.bounce {
-    -webkit-animation: bounce .75s ease-in-out;
-    -moz-animation-name: bounce .75s ease-in-out;
-    -ms-animation-name: bounce .75s ease-in-out;
-    -o-animation-name: bounce .75s ease-in-out;
-    animation-name: bounce .75s ease-in-out;
-}
-    body {
-      font-size: 14px;
-      font-family: sans-serif;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-      background-color: #E3A869;
-    }
-    header {
-      margin-top: 5em;
-    }
-    footer {
-      margin-top: 2em;
-    }
-    #content, header, footer {
-      width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    #content h1 {
-      font-size: 7em;
-      text-align: right;
-      cursor: default;
-      display: block;
-      width: 400px;
-      height: 250px;
-      background-image:url('harrisonwong.png');
-      background-repeat: no-repeat;
-    }
-    #content h1 span {
-      display: none;
-    }
-    footer {
-      background-image:url('css/footer.png');
-      background-repeat: no-repeat;
-    }
-    footer ul {
-      /* -moz-border-radius:6px;
-      -webkit-border-radius:6px;
-      border-radius:6px;
-      border:1px solid #CCC; */
-      overflow: auto;
-    }
-    footer li {
-      display: block;
-      position: relative;
-      float: left;
-      border-right: 1px solid rgba(0,0,0,0.1);
-      line-height: 30px;
-    }
-    footer li a {
-      display: block;
-      margin: 10px 11px 10px 10px;
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      height: 30px;
-      color: #FFF;
-    }
-    footer li:hover {
-      text-shadow: 2px 2px rgba(0,0,0,0.5);
-    }
-    footer li a span {
-      display: none;
-    }
-    footer .github {
-      background-image:url('css/icons/github.png');
-      width: 70px;
-    }
-    footer .github:hover {
-      background-image:url('css/icons/github-hover.png');
-    }
-    footer .facebook {
-      background-image:url('css/icons/fb.png');
-      width: 30px;
-    }
-    footer .facebook:hover {
-      background-image:url('css/icons/fb-hover.png');
-    }
-    footer .google {
-      background-image:url('css/icons/g+.png');
-      width: 30px;
-    }
-    footer .google:hover {
-      background-image:url('css/icons/g+-hover.png');
-    }
-  </style>
-  <!--
-  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-  <script type="text/javascript" src="js/jquery-ui-1.8.17.min.js"></script>
-  <script type="text/javascript">
-  
-  </script> -->
-</head>
-<body>
-  <header>
+                  <div class="accordion-group">
+                    <div class="accordion-heading">
+                      <h3 class="accordion-toggle">2010</h3>
+                    </div>
+                    <div class="accordion-body collapse in">
+                      <div class="accordion-inner">
+                        <ul>
+                          <li>
+                            <h4><a href="http://www.rso.cornell.edu/emed/">eMed</a></h4>
+                            <p>
+                              A Cornell student organization whos goal is to help engineering premedical students advance their careers both in the real world and academically.
+                              Responsible for creating the main website along with a database of resources for students.
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
 
-  </header>
-  <section id="content">
-    <h1>
-      <span>Harrison<br />Wong</span>
-    </h1>
-  </section>
-  <footer class="bounce">
-    <ul>
-      <li><a href="/projects.html">Projects</a></li>
-      <li><a href="/classes.html">Classes</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="https://github.com/HarrisonW" class="github"><span>Github</span></a></li>
-      <li><a href="https://plus.google.com/113671703116927364822" class="google"><span>Google+</span></a></li>      
-      <li><a href="https://facebook.com/hw" class="facebook"><span>Facebook</span></a></li>
-    </ul>
-  </footer>
-</body>
+                  <div class="accordion-group">
+                    <div class="accordion-heading">
+                      <h3 class="accordion-toggle">2009</h3>
+                    </div>
+                    <div class="accordion-body collapse in">
+                      <div class="accordion-inner">
+                        <ul>
+                          <li>
+                            <h4><a href="http://www.realitychecknetwork.com/">Reality Check Network</a></h4>
+                            <p>
+                              Web hosting company with many servers, virtual machines, datacenters, etc.
+                              Customer resource management system to manage all of the company's resources and the links between them.
+                            </p>
+                            <p>
+                              Designed and wrote entire version 2 of the system from the bottom up.
+                              Different systems such as DNS provisioning, virtual machine provisioning and graphing were later implemented, to create a unified management system.
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="span4">
+                <div class="alert alert-success">
+                  <h3>Languages I'm Good At</h3>
+                  <ul class="unstyled">
+                    <li>
+                      Ruby (on Rails)
+                    </li>
+                    <li>
+                      Javascript (jQuery, node.js)
+                    </li>
+                    <li>
+                      PHP
+                    </li>
+                  </ul>
+                </div>
+                <div class="alert alert-warning">
+                  <h3>Languages I'm Okay At</h3>
+                  <ul class="unstyled">
+                    <li>
+                      Java
+                    </li>
+                    <li>
+                      Python
+                    </li>
+                    <li>
+                      C#
+                    </li>
+                  </ul>
+                </div>
+                <div class="alert alert-info">
+                  <h3>Languages I've Used</h3>
+                  <ul class="unstyled">
+                    <li>
+                      C/C++
+                    </li>
+                    <li>
+                      OCaml
+                    </li>
+                    <li>
+                      Perl
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section id="classes">
+          <div class="section-header">
+            <h1>School Stuffs</h1>
+            <div class="row">
+              <div class="span6">
+                <div class="alert alert-info">
+                  <h3>Cornell University 2012</h3>
+                  <p>
+                    College of Engineering
+                  </p>
+                  <p>
+                    Major: Computer Science
+                    <br />
+                    Minor: [Business] and [Electrical and Computer Engineering]
+                  </p>
+                </div>
+              </div>
+              <div class="span6">
+                <div class="alert alert-info">
+                  <h3>Stuyvesant High School 2008</h3>
+                  <p>
+                    Concentration in Computers and Mathematics
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <h3>2011-2012</h3>
+            <div class="row">
+              <div class="span6">
+                <ul class="unstyled">
+                  <h4>Fall</h4>
+                  <li>
+                    Datacenter Networks &amp; Services (<a href="/superpub.pdf">paper</a>)
+                  </li>
+                  <li>
+                    Cloud Computing
+                  </li>
+                  <li>
+                    Digital System Design - Microcontrollers
+                  </li>
+                  <li>
+                    Introduction to Wines
+                  </li>
+                </ul>
+              </div>
+              <div class="span6">
+                <h4>Spring</h4>
+                <ul class="unstyled">
+                  <li>
+                    Machine Learning
+                  </li>
+                  <li>
+                    Computer Architecture
+                  </li>
+                  <li>
+                    Beginning Mandarin I
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>2010-2011</h3>
+            <div class="row">
+              <div class="span6">
+                <ul class="unstyled">
+                  <h4>Fall</h4>
+                  <li>
+                    Introduction to the Analysis of Algorithms
+                  </li>
+                  <li>
+                    Architecture of Large-Scale Information Systems
+                  </li>
+                  <li>
+                    Introduction to Microelectronics
+                  </li>
+                  <li>
+                    Finance
+                  </li>
+                </ul>
+              </div>
+              <div class="span6">
+                <h4>Spring</h4>
+                <ul class="unstyled">
+                  <li>
+                    Operating Systems
+                  </li>
+                  <li>
+                    Introduction to Database Systems (+Practicum)
+                  </li>
+                  <li>
+                    Intro to Japan
+                  </li>
+                  <li>
+                    Financial Accounting
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>2009-2010</h3>
+            <div class="row">
+              <div class="span6">
+                <ul class="unstyled">
+                  <h4>Fall</h4>
+                  <li>
+                    Functional Programming
+                  </li>
+                  <li>
+                    Intro to Digital Logic Design
+                  </li>
+                  <li>
+                    Linear Algebra
+                  </li>
+                  <li>
+                    Physics III: Waves &amp; Optics
+                  </li>
+                  <li>
+                    Marketing
+                  </li>
+                </ul>
+              </div>
+              <div class="span6">
+                <h4>Spring</h4>
+                <ul class="unstyled">
+                  <li>
+                    Web Information Systems
+                  </li>
+                  <li>
+                    Networks
+                  </li>
+                  <li>
+                    Signals &amp; Information
+                  </li>
+                  <li>
+                    Intro to Business Management
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>2008-2009</h3>
+            <div class="row">
+              <div class="span6">
+                <ul class="unstyled">
+                  <h4>Fall</h4>
+                  <li>
+                    Objected Oriented Programming (Java) (+Practicum)
+                  </li>
+                  <li>
+                    Multivariable Calculus
+                  </li>
+                  <li>
+                    Engineering General Chemistry
+                  </li>
+                  <li>
+                    Nanotechnology
+                  </li>
+                </ul>
+              </div>
+              <div class="span6">
+                <h4>Spring</h4>
+                <ul class="unstyled">
+                  <li>
+                    Discrete Structures
+                  </li>
+                  <li>
+                    Computer Organization
+                  </li>
+                  <li>
+                    Differential Equations
+                  </li>
+                  <li>
+                    Physics II: Electricity and Magnetism
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+    <header class="container">
+      <div id="container-name">
+        <div class="home-animate5 name">
+          <a href="#">Harrison Wong</a>
+        </div>
+      </div>
+      <div class="row">
+
+        <div id="button-folder" class="home-animate1 button" title="Projects" rel="tooltip">
+          <a href="#projects"> <img class="home-icon" src="img/folder.png" alt="Folder"> </a>
+        </div>
+        <div id="button-classes" class="home-animate2 button" title="Classes" rel="tooltip">
+          <a href="#classes"> <img class="home-icon" src="img/cornell.png" alt="Cornell"> </a>
+        </div>
+        <div id="button-github" class="home-animate3 button button-row" title="Github" rel="tooltip">
+          <a href="https://github.com/HarrisonW"> <img class="home-icon" src="img/octocat.png" alt="Octocat"> </a>
+        </div>
+        <div id="button-classes" class="home-animate4 button" title="Facebook" rel="tooltip">
+          <a href="https://www.facebook.com/hw"> <img class="home-icon" src="img/facebook.png" alt="Facebook"> </a>
+        </div>
+      </div>
+    </header>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui-1.8.20.custom.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/other.js"></script>
+
+  </body>
 </html>
